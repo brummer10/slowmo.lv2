@@ -1,7 +1,7 @@
 # Slowmo.lv2
 A multiband slow gate with dely/echo. 
 
-![Rumor](https://github.com/brummer10/slowmo.lv2/blob/master/slowmo.png?raw=true)
+![slowmo](https://raw.githubusercontent.com/brummer10/slowmo.lv2/main/slowmo.png)
 
 
 ## Dependencys
