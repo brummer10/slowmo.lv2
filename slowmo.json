@@ -1,0 +1,204 @@
+{
+  "Project" : "urn:brummer:slowmo_ui",
+  "Name" : "slowmo",
+  "Author" : "brummer",
+  "Window size" : [ 771 , 220 ] ,
+  "Contolls" : 8 ,
+  "Colors" : [
+    {
+      "NORMAL" : [
+        ".fg" :       [ 0.850, 0.850, 0.850, 1.000] ,
+        ".bg" :       [ 0.094, 0.267, 0.364, 1.000] ,
+        ".base" :     [ 0.000, 0.000, 0.000, 1.000] ,
+        ".text" :     [ 0.900, 0.900, 0.900, 1.000] ,
+        ".shadow" :   [ 0.000, 0.000, 0.000, 0.200] ,
+        ".frame" :    [ 0.000, 0.000, 0.000, 1.000] ,
+        ".light" :    [ 0.100, 0.100, 0.100, 1.000] 
+      ] ,
+      "PRELIGHT" : [
+        ".fg" :       [ 1.000, 0.000, 1.000, 1.000] ,
+        ".bg" :       [ 0.250, 0.250, 0.250, 1.000] ,
+        ".base" :     [ 0.300, 0.300, 0.300, 1.000] ,
+        ".text" :     [ 1.000, 1.000, 1.000, 1.000] ,
+        ".shadow" :   [ 0.100, 0.100, 0.100, 0.400] ,
+        ".frame" :    [ 0.300, 0.300, 0.300, 1.000] ,
+        ".light" :    [ 0.300, 0.300, 0.300, 1.000] 
+      ] ,
+      "SELECTED" : [
+        ".fg" :       [ 0.900, 0.900, 0.900, 1.000] ,
+        ".bg" :       [ 0.200, 0.200, 0.200, 1.000] ,
+        ".base" :     [ 0.500, 0.180, 0.180, 1.000] ,
+        ".text" :     [ 1.000, 1.000, 1.000, 1.000] ,
+        ".shadow" :   [ 0.800, 0.180, 0.180, 0.200] ,
+        ".frame" :    [ 0.500, 0.180, 0.180, 1.000] ,
+        ".light" :    [ 0.500, 0.180, 0.180, 1.000] 
+      ] ,
+      "ACTIVE" : [
+        ".fg" :       [ 0.000, 1.000, 1.000, 1.000] ,
+        ".bg" :       [ 0.000, 0.000, 0.000, 1.000] ,
+        ".base" :     [ 0.180, 0.380, 0.380, 1.000] ,
+        ".text" :     [ 0.750, 0.750, 0.750, 1.000] ,
+        ".shadow" :   [ 0.180, 0.380, 0.380, 0.500] ,
+        ".frame" :    [ 0.180, 0.380, 0.380, 1.000] ,
+        ".light" :    [ 0.180, 0.380, 0.380, 1.000] 
+      ] ,
+      "INSENSITIVE" : [
+        ".fg" :       [ 0.850, 0.850, 0.850, 0.500] ,
+        ".bg" :       [ 0.100, 0.100, 0.100, 0.500] ,
+        ".base" :     [ 0.000, 0.000, 0.000, 0.500] ,
+        ".text" :     [ 0.900, 0.900, 0.900, 0.500] ,
+        ".shadow" :   [ 0.000, 0.000, 0.000, 0.100] ,
+        ".frame" :    [ 0.000, 0.000, 0.000, 0.500] ,
+        ".light" :    [ 0.100, 0.100, 0.100, 0.500] 
+      ] ,
+    }
+  ] ,
+  "IS_IMAGE_TOGGLE" : [
+    {
+      "Type" : "add_lv2_image_toggle",
+      "Label" : "Bypass",
+      "Port" : 2 ,
+      "Symbol" : "Bypass",
+      "Size" : [ 29 , 57 , 60 , 80 ] ,
+      "Image" : "/home/brummer/projecte/slowmo_ui/resources/switch_gbxc.png",
+    }
+  ] ,
+  "COLOR" : [ 0 , 1 , 0.100000 , 0.100000 , 0.100000 , 1.000000 ] ,
+  "IS_KNOB" : [
+    {
+      "Type" : "add_lv2_knob",
+      "Label" : "DOWNTIME",
+      "Port" : 3 ,
+      "Symbol" : "DOWNTIME",
+      "Size" : [ 19 , 15 , 65 , 80 ] ,
+      "Image" : "/home/brummer/projecte/slowmo_ui/resources/knob_sprite_caccaebi.png",
+      "Parent" : [ 0 , -1 ] ,
+      "Adjustment" : "CL_CONTINUOS",
+      "Default Value" : 5.000000 ,
+      "Min Value" : 0.000000 ,
+      "Max Value" : 1000.000000 ,
+      "Step Size" : 1.000000 ,
+    }
+  ] ,
+  "COLOR" : [ 0 , 1 , 0.100000 , 0.100000 , 0.100000 , 1.000000 ] ,
+  "IS_KNOB" : [
+    {
+      "Type" : "add_lv2_knob",
+      "Label" : "TRESHOLD",
+      "Port" : 4 ,
+      "Symbol" : "TRESHOLD",
+      "Size" : [ 109 , 15 , 65 , 80 ] ,
+      "Image" : "/home/brummer/projecte/slowmo_ui/resources/knob_sprite_caccaebi.png",
+      "Parent" : [ 0 , -1 ] ,
+      "Adjustment" : "CL_CONTINUOS",
+      "Default Value" : 1.000000 ,
+      "Min Value" : 0.000000 ,
+      "Max Value" : 2.000000 ,
+      "Step Size" : 0.010000 ,
+    }
+  ] ,
+  "COLOR" : [ 0 , 1 , 0.100000 , 0.100000 , 0.100000 , 1.000000 ] ,
+  "IS_KNOB" : [
+    {
+      "Type" : "add_lv2_knob",
+      "Label" : "UPTIME",
+      "Port" : 5 ,
+      "Symbol" : "UPTIME",
+      "Size" : [ 199 , 15 , 65 , 80 ] ,
+      "Image" : "/home/brummer/projecte/slowmo_ui/resources/knob_sprite_caccaebi.png",
+      "Parent" : [ 0 , -1 ] ,
+      "Adjustment" : "CL_CONTINUOS",
+      "Default Value" : 100.000000 ,
+      "Min Value" : 0.000000 ,
+      "Max Value" : 1000.000000 ,
+      "Step Size" : 1.000000 ,
+    }
+  ] ,
+  "COLOR" : [ 0 , 1 , 0.100000 , 0.100000 , 0.100000 , 1.000000 ] ,
+  "IS_KNOB" : [
+    {
+      "Type" : "add_lv2_knob",
+      "Label" : "VOLUME",
+      "Port" : 6 ,
+      "Symbol" : "VOLUME",
+      "Size" : [ 289 , 15 , 65 , 80 ] ,
+      "Image" : "/home/brummer/projecte/slowmo_ui/resources/knob_sprite_caccaebi.png",
+      "Parent" : [ 0 , -1 ] ,
+      "Adjustment" : "CL_CONTINUOS",
+      "Default Value" : 6.000000 ,
+      "Min Value" : -20.000000 ,
+      "Max Value" : 20.000000 ,
+      "Step Size" : 0.100000 ,
+    }
+  ] ,
+  "COLOR" : [ 0 , 1 , 0.100000 , 0.100000 , 0.100000 , 1.000000 ] ,
+  "IS_KNOB" : [
+    {
+      "Type" : "add_lv2_knob",
+      "Label" : "BPM",
+      "Port" : 7 ,
+      "Symbol" : "BPM",
+      "Size" : [ 37 , 20 , 60 , 80 ] ,
+      "Image" : "/home/brummer/projecte/slowmo_ui/resources/knob_sprite_caccaebi.png",
+      "Parent" : [ 1 , -1 ] ,
+      "Adjustment" : "CL_CONTINUOS",
+      "Default Value" : 120.000000 ,
+      "Min Value" : 24.000000 ,
+      "Max Value" : 360.000000 ,
+      "Step Size" : 1.000000 ,
+    }
+  ] ,
+  "COLOR" : [ 0 , 1 , 0.100000 , 0.100000 , 0.100000 , 1.000000 ] ,
+  "IS_KNOB" : [
+    {
+      "Type" : "add_lv2_knob",
+      "Label" : "GAIN",
+      "Port" : 8 ,
+      "Symbol" : "GAIN",
+      "Size" : [ 112 , 20 , 60 , 80 ] ,
+      "Image" : "/home/brummer/projecte/slowmo_ui/resources/knob_sprite_caccaebi.png",
+      "Parent" : [ 1 , -1 ] ,
+      "Adjustment" : "CL_CONTINUOS",
+      "Default Value" : 0.000000 ,
+      "Min Value" : -20.000000 ,
+      "Max Value" : 20.000000 ,
+      "Step Size" : 0.100000 ,
+    }
+  ] ,
+  "COLOR" : [ 0 , 1 , 0.100000 , 0.100000 , 0.100000 , 1.000000 ] ,
+  "IS_KNOB" : [
+    {
+      "Type" : "add_lv2_knob",
+      "Label" : "FEEDBACK",
+      "Port" : 9 ,
+      "Symbol" : "FEEDBACK",
+      "Size" : [ 187 , 20 , 60 , 80 ] ,
+      "Image" : "/home/brummer/projecte/slowmo_ui/resources/knob_sprite_caccaebi.png",
+      "Parent" : [ 1 , -1 ] ,
+      "Adjustment" : "CL_CONTINUOS",
+      "Default Value" : 0.500000 ,
+      "Min Value" : 0.000000 ,
+      "Max Value" : 1.000000 ,
+      "Step Size" : 0.010000 ,
+    }
+  ] ,
+  "COLOR" : [ 0 , 1 , 0.100000 , 0.100000 , 0.100000 , 1.000000 ] ,
+  "IS_Frame Box" : [
+    {
+      "Type" : "add_lv2_frame",
+      "Label" : "Slow Gate",
+      "Size" : [ 105 , 43 , 366 , 120 ] ,
+      "Image" : "None",
+    }
+  ] ,
+  "COLOR" : [ 0 , 1 , 0.100000 , 0.100000 , 0.100000 , 1.000000 ] ,
+  "IS_Frame Box" : [
+    {
+      "Type" : "add_lv2_frame",
+      "Label" : "Delay",
+      "Size" : [ 475 , 42 , 287 , 120 ] ,
+      "Image" : "None",
+    }
+  ] ,
+  "COLOR" : [ 0 , 1 , 0.100000 , 0.100000 , 0.100000 , 1.000000 ] 
+}
