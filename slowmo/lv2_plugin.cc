@@ -185,7 +185,7 @@ Widget_t* add_lv2_hslider(Widget_t *w, Widget_t *p, PortIndex index, const char 
 
 Widget_t* add_lv2_toggle_button(Widget_t *w, Widget_t *p, PortIndex index, const char * label,
                                 X11_UI* ui, int x, int y, int width, int height) {
-    w = add_toggle_button(p, label, x, y, width, height);
+    w = add_on_off_button(p, label, x, y, width, height);
     w->parent_struct = ui;
     w->data = index;
     w->func.value_changed_callback = value_changed;

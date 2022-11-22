@@ -50,6 +50,7 @@ typedef enum
    BPM, // , 1.2e+02, 24.0, 3.6e+02, 1.0 
    GAIN, // , 0.0, -2e+01, 2e+01, 0.1 
    FEEDBACK, // , 0.5, 0.0, 1.0, 0.01 
+   ON, // , 1.0, 0.0, 1.0, 1.0
 } PortIndex;
 
 #include "Bandsplit.cc"
@@ -117,6 +118,8 @@ private:
     float* output0;
     float* bypass;
     float bypass_;
+    float* on;
+    float on_;
     // bypass ramping
     bool needs_ramp_down;
     bool needs_ramp_up;
@@ -180,6 +183,7 @@ Xslowmo::Xslowmo() :
     output0(NULL),
     bypass(NULL),
     bypass_(2),
+    on(0),
     needs_ramp_down(false),
     needs_ramp_up(false),
     bypassed(false),
@@ -276,6 +280,9 @@ void Xslowmo::connect_(uint32_t port,void* data)
         case 2:
             bypass = static_cast<float*>(data);
             break;
+        case 10:
+            on = static_cast<float*>(data);
+            break;
         default:
             break;
     }
@@ -300,6 +307,7 @@ void Xslowmo::run_dsp_(uint32_t n_samples)
 {
     if(n_samples<1) return;
     MXCSR.set_();
+#define on_ (*on)
 
     float output00[n_samples];
     memset(output00, 0, n_samples*sizeof(output00[0]));
@@ -365,7 +373,7 @@ void Xslowmo::run_dsp_(uint32_t n_samples)
         plugin16->compute(n_samples, output16, output00);
         plugin17->compute(n_samples, output17, output00);
         plugin18->compute(n_samples, output18, output00);
-        plugin->compute(n_samples, output00, output00);
+        if (on_) plugin->compute(n_samples, output00, output00);
         plugin_g->compute(n_samples, output00, output0);
     }               
 
@@ -406,6 +414,7 @@ void Xslowmo::run_dsp_(uint32_t n_samples)
             ramp_down = ramp_up;
         }
     }
+#undef on_
     MXCSR.reset_();
 }
 

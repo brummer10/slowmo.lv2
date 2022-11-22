@@ -1,9 +1,15 @@
 {
   "Project" : "urn:brummer:slowmo_ui",
+  "Base project" : "urn:brummer:slowmo",
   "Name" : "slowmo",
   "Author" : "brummer",
-  "Window size" : [ 771 , 220 ] ,
-  "Contolls" : 8 ,
+  "Window size" : [ 771 , 219 ] ,
+  "Audio Inputs" : 1 ,
+  "Audio Outputs" : 1 ,
+  "MIDI Input" : 0 ,
+  "MIDI Output" : 0 ,
+  "LV2 bypass" : 0 ,
+  "Controls" : 9 ,
   "Colors" : [
     {
       "NORMAL" : [
@@ -51,6 +57,22 @@
         ".frame" :    [ 0.000, 0.000, 0.000, 0.500] ,
         ".light" :    [ 0.100, 0.100, 0.100, 0.500] 
       ] ,
+    }
+  ] ,
+  "IS_Frame Box" : [
+    {
+      "Type" : "add_lv2_frame",
+      "Label" : "Slow Gate",
+      "Size" : [ 105 , 43 , 359 , 120 ] ,
+      "Image" : "None",
+    }
+  ] ,
+  "IS_Frame Box" : [
+    {
+      "Type" : "add_lv2_frame",
+      "Label" : "Delay",
+      "Size" : [ 475 , 42 , 287 , 120 ] ,
+      "Image" : "None",
     }
   ] ,
   "IS_IMAGE_TOGGLE" : [
@@ -138,7 +160,7 @@
       "Label" : "BPM",
       "Port" : 7 ,
       "Symbol" : "BPM",
-      "Size" : [ 37 , 20 , 60 , 80 ] ,
+      "Size" : [ 63 , 20 , 60 , 80 ] ,
       "Image" : "resources/knob_sprite_caccaebi.png",
       "Parent" : [ 1 , -1 ] ,
       "Adjustment" : "CL_CONTINUOS",
@@ -155,7 +177,7 @@
       "Label" : "GAIN",
       "Port" : 8 ,
       "Symbol" : "GAIN",
-      "Size" : [ 112 , 20 , 60 , 80 ] ,
+      "Size" : [ 128 , 19 , 60 , 80 ] ,
       "Image" : "resources/knob_sprite_caccaebi.png",
       "Parent" : [ 1 , -1 ] ,
       "Adjustment" : "CL_CONTINUOS",
@@ -172,7 +194,7 @@
       "Label" : "FEEDBACK",
       "Port" : 9 ,
       "Symbol" : "FEEDBACK",
-      "Size" : [ 187 , 20 , 60 , 80 ] ,
+      "Size" : [ 206 , 20 , 60 , 80 ] ,
       "Image" : "resources/knob_sprite_caccaebi.png",
       "Parent" : [ 1 , -1 ] ,
       "Adjustment" : "CL_CONTINUOS",
@@ -183,22 +205,15 @@
     }
   ] ,
   "COLOR" : [ 0 , 1 , 0.100000 , 0.100000 , 0.100000 , 1.000000 ] ,
-  "IS_Frame Box" : [
+  "IS_TOGGLE_BUTTON" : [
     {
-      "Type" : "add_lv2_frame",
-      "Label" : "Slow Gate",
-      "Size" : [ 105 , 43 , 366 , 120 ] ,
+      "Type" : "add_lv2_toggle_button",
+      "Label" : "ON",
+      "Port" : 10 ,
+      "Symbol" : "Switch10",
+      "Size" : [ 16 , 22 , 31 , 31 ] ,
       "Image" : "None",
+      "Parent" : [ 1 , -1 ] ,
     }
-  ] ,
-  "COLOR" : [ 0 , 1 , 0.100000 , 0.100000 , 0.100000 , 1.000000 ] ,
-  "IS_Frame Box" : [
-    {
-      "Type" : "add_lv2_frame",
-      "Label" : "Delay",
-      "Size" : [ 475 , 42 , 287 , 120 ] ,
-      "Image" : "None",
-    }
-  ] ,
-  "COLOR" : [ 0 , 1 , 0.100000 , 0.100000 , 0.100000 , 1.000000 ] 
+  ] 
 }
